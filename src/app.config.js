@@ -2,15 +2,21 @@ const currentUserId = 1
 
 const users = [{
   id: 1,
-  handle: 'jdoe'
+  handle: 'jdoe',
+  lang: 'en',
+  locale: 'est'
 },
 {
   id: 2,
-  handle: 'ksmith'
+  handle: 'ksmith',
+  lang: 'en',
+  locale: 'pst'
 },
 {
   id: 3,
-  handle: 'bpullman'
+  handle: 'bpullman',
+  lang: 'es',
+  locale: 'mst'
 }]
 
 const appConfig = {

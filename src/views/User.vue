@@ -3,6 +3,8 @@
     <h2>User Page - User.vue</h2>
     <hr>
     <button @click="navHome" class="btn btn-lg btn-primary">Go Home</button>
+    <button @click="navBack" class="btn btn-warning"><</button>
+    <button @click="navFwd" class="btn btn-warning">></button>
     <hr>
     <router-view :users="users"></router-view>
   </section>
@@ -24,6 +26,12 @@ export default {
   methods: {
     navHome () {
       this.$router.push({ path: '/' })
+    },
+    navBack () {
+      this.$router.go(-1)
+    },
+    navFwd () {
+      this.$router.go(1)
     }
   }
 }
