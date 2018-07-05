@@ -27,7 +27,7 @@
       </app-navbar>
     </section>
     <!-- main wrapper -->
-    <section class="container">
+    <section class="container fix-top-nav-margin">
       <router-view></router-view>
     </section>
     <!-- footer -->
@@ -65,6 +65,8 @@ export default {
 }
 </script>
 
-<style lang="scss">
-
+<style lang="scss" scoped>
+.fix-top-nav-margin {
+  margin-top: 20px;
+}
 </style>
