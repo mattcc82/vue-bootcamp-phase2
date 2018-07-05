@@ -1,5 +1,5 @@
 <template>
-  <b-nav-item :href="linkHref">{{ linkText }}</b-nav-item>
+  <b-nav-item :to="linkHref" :exact="exact">{{ linkText }}</b-nav-item>
 </template>
 <script>
 export default {
@@ -10,7 +10,12 @@ export default {
     },
     linkHref: {
       type: String,
-      default: '#'
+      default: '/'
+    }
+  },
+  computed: {
+    exact () {
+      return this.linkHref === '/'
     }
   }
 }

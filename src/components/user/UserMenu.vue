@@ -6,7 +6,8 @@
     <b-dropdown-item
       v-for="item in userMenuItems"
       :key="item.text"
-      :href="item.link">
+      :to="item.link"
+      exact>
       {{ item.text }}
     </b-dropdown-item>
   </b-nav-item-dropdown>
@@ -21,8 +22,7 @@ export default {
     userMenuItems: {
       type: Array,
       default: [
-        { text: 'Profile', link: '#' },
-        { text: 'Sign Out', link: '#' }
+        { text: 'Available Profiles', link: '/user' }
       ]
     }
   }

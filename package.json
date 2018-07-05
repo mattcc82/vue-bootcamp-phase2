@@ -1,5 +1,5 @@
 {
-  "name": "bootcamp_4",
+  "name": "bootcamp_5",
   "description": "Create a project step-by-step using VueJs + webpack-simple cli template webpack-simple",
   "version": "1.0.0",
   "author": "Matt Castle <mattcc82@gmail.com>",
@@ -11,7 +11,8 @@
   },
   "dependencies": {
     "bootstrap-vue": "^2.0.0-rc.11",
-    "vue": "^2.5.11"
+    "vue": "^2.5.11",
+    "vue-router": "^3.0.1"
   },
   "browserslist": [
     "> 1%",
