@@ -6,7 +6,9 @@
     <button @click="navBack" class="btn btn-warning"><</button>
     <button @click="navFwd" class="btn btn-warning">></button>
     <hr>
-    <router-view :users="users"></router-view>
+    <transition name="slide" mode="out-in">
+      <router-view :users="users"></router-view>
+    </transition>
   </section>
 </template>
 <script>
