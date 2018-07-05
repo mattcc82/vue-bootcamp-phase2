@@ -28,7 +28,9 @@
     </section>
     <!-- main wrapper -->
     <section class="container fix-top-nav-margin">
-      <router-view></router-view>
+      <transition name="fade-slide" mode="out-in">
+        <router-view></router-view>
+      </transition>
     </section>
     <!-- footer -->
     <section>
@@ -65,8 +67,34 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .fix-top-nav-margin {
   margin-top: 20px;
+}
+// fade-slide
+.fade-slide-enter {
+  transform: translateY(50px);
+  opacity: 0;
+}
+.fade-slide-enter-active {
+  transition: all .25s ease-in-out;
+}
+.fade-slide-leave-active {
+  transition: .75s ease-in-out;
+  transform: translateY(50px);
+  opacity: 0;
+}
+// slide
+.slide-enter {
+  transform: translateX(50px);
+  opacity: 0;
+}
+.slide-enter-active {
+  transition: all .25s ease-in;
+}
+.slide-leave-active {
+  transition: all .5s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+  transform: translateX(50px);
+  opacity: 0;
 }
 </style>
