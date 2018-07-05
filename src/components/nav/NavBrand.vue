@@ -1,5 +1,5 @@
 <template>
-  <b-navbar-brand href="#">
+  <b-navbar-brand to="/">
     {{ brandTitle }}
   </b-navbar-brand>
 </template>
